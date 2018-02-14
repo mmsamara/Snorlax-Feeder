@@ -3,11 +3,13 @@
 <head>
 	<title>Muhammad Snorlax Feeder</title>
 
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="assets/javascript/game.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
 	<div class="container">
@@ -22,7 +24,7 @@
 	    	<div class="col-md-8">
 				<div class='panel panel-default'>
 				  <div class='panel-heading'>
-				    <h3 class='panel-title'>Get Snorlax to This Level of Fullness: <strong id="goal-number">45</strong></h3>
+				    <h3 class='panel-title'>Get Snorlax to This Level of Fullness: <strong id="goal-number"></strong></h3>
 				  </div>
 				  <div class='panel-body'>
 	    			<img class="img-responsive" src="assets/images/Snorlax.png">		
@@ -32,7 +34,7 @@
 	    	<div class="col-md-4">
 	    		<div class='panel panel-default'>
 				  <div class='panel-heading'>
-				    <h3 class='panel-title'><strong id="result-message">You Win!</strong></h3>
+				    <h3 class='panel-title'><strong id="result-message"></strong></h3>
 				  </div>
 				  <div class='panel-body'>
 	    			<h4>Wins: <span id="wins-area"></span></h4>
@@ -46,10 +48,10 @@
 				  </div>
 				  <div class='panel-body'>
 				  	<div class="row">
-				  		<div class="col-md-3"><img class="img-responsive food" src="assets/images/Cake.png"></div>
-				  		<div class="col-md-3"><img class="img-responsive" src="assets/images/Lobster.png"></div>
-				  		<div class="col-md-3"><img class="img-responsive" src="assets/images/Shark.png"></div>
-				  		<div class="col-md-3"><img class="img-responsive food" src="assets/images/Chicken.png"></div>
+				  		<div class="col-md-3"><img id="cake" class="img-responsive food" alt="cake" src="assets/images/Cake.png"></div>
+				  		<div class="col-md-3"><img id="lobster" class="img-responsive" alt="lobster" src="assets/images/Lobster.png"></div>
+				  		<div class="col-md-3"><img id="shark" class="img-responsive" alt="shark" src="assets/images/Shark.png"></div>
+				  		<div class="col-md-3"><img id="chicken" class="img-responsive food" alt="chicken" src="assets/images/Chicken.png"></div>
 					</div>
 				  </div>
 				</div>
@@ -59,7 +61,7 @@
 				    <h3 class='panel-title'>Current Fullness Level: </h3>
 				  </div>
 				  <div class='panel-body'>
-				  	<h1>37</h1>
+				  	<h1 id="current-fullness"></h1>
 				  </div>
 				</div>
 	    	</div>
