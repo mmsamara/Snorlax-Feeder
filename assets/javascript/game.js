@@ -9,7 +9,8 @@ var chickenNumber;
 
 $(document).ready(function() {
 
-
+	
+	
 	function initializeGame() {
 
 		currentFullness = 0;
@@ -26,16 +27,41 @@ $(document).ready(function() {
 		
 	};
 
-	if (currentFullness === randomNumber) {
-		wins++;
-		$("#result-message").text("You Win!");
-		initializeGame();
+	function feedSnorlax(food) {
+		currentFullness += food;
+		$("#current-fullness").text(currentFullness);
+		if (currentFullness === randomNumber) {
+			wins++;
+			$("#result-message").text("You Win!");
+			initializeGame();
+		}
+		else if (currentFullness > randomNumber) {
+			losses++;
+			$("#result-message").text("You Lose :(");
+			initializeGame();
+		}
 	}
-	else if (currentFullness > randomNumber) {
-		losses++;
-		$("#result-message").text("You Lose :(");
-		initializeGame();
-	}
+
+	//$("#cake").click(feedSnorlax(cakeNumber));
+
+	$("#cake").click(function() {
+		feedSnorlax(cakeNumber);
+	});
+
+	$("#lobster").click(function() {
+		feedSnorlax(lobsterNumber);
+	});
+
+	$("#shark").click(function() {
+		feedSnorlax(sharkNumber);
+	});
+
+	$("#chicken").click(function() {
+		feedSnorlax(chickenNumber);
+	});
+
+	initializeGame();
+	/*
 
 	$("#cake").click(function() {
 		currentFullness += cakeNumber;
@@ -96,11 +122,6 @@ $(document).ready(function() {
 			initializeGame();
 		}
 	});
+	*/
 
-	initializeGame();
-
-	console.log(cakeNumber);
-	console.log(sharkNumber);
-	console.log(lobsterNumber);
-	console.log(chickenNumber);
 });
