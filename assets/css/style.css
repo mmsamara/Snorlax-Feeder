@@ -1,3 +1,7 @@
 .food {
 	padding-top: 10%;
 }
+
+#cake:hover, #lobster:hover, #shark:hover, #chicken:hover {
+	cursor: pointer;
+}

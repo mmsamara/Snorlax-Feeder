@@ -26,6 +26,7 @@ $(document).ready(function() {
 	};
 
 	function feedSnorlax(food) {
+		
 		currentFullness += food;
 		$("#current-fullness").text(currentFullness);
 		if (currentFullness === randomNumber) {
@@ -39,7 +40,11 @@ $(document).ready(function() {
 			initializeGame();
 		}
 	}
+	//function invocation
+	//$("#cake").click(feedSnorlax.bind(this, cakeNumber));
+	//$("#cake").click(undefined);
 
+	//function declaration
 	$("#cake").click(function() {
 		feedSnorlax(cakeNumber);
 	});
@@ -57,5 +62,5 @@ $(document).ready(function() {
 	});
 
 	initializeGame();
-	
+
 });
